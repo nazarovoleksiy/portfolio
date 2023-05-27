@@ -221,7 +221,8 @@ h5 {
 }
 
 .box-header.menu-is-open {
-    background-color: rgba(255, 255, 255, 0.96);
+    position: fixed;
+    overflow: hidden;
 }
 
 .box-logo {
@@ -291,7 +292,7 @@ h5 {
 
 .box-primary-nav-trigger .box-menu-icon.is-clicked::before,
 .box-primary-nav-trigger .box-menu-icon.is-clicked::after {
-    background-color: 393939;
+    background-color: #393939;
 }
 
 .box-primary-nav-trigger .box-menu-icon.is-clicked::before {
@@ -416,6 +417,8 @@ h5 {
 .box-primary-nav li {
     font-size: 18px;
 }
+
+
 
 
 /* box-intro
@@ -744,12 +747,12 @@ b i:last-child {
     left: 0px;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .8);
-    -webkit-transform: translate(-100%);
-    transform: translate(-100%);
+    background-color: rgba(149, 149, 149, 0.8);
+    /*-webkit-transform: translate(-100%);*/
+    /*transform: translate(-100%);*/
     opacity: 0;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .portfolio_item .portfolio_item_hover .item_info {
@@ -813,6 +816,16 @@ b i:last-child {
     padding: 0 10px;
     -webkit-transition: all .2s ease-in-out .2s;
     transition: all .2s ease-in-out .2s;
+}
+
+.elem-animation {
+    opacity: 0;
+}
+
+.elem-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
 }
 
 .portfolio_filter {
@@ -1163,6 +1176,7 @@ textarea:focus {
 }
 
 @media only screen and (max-width: 520px) {
+
     .box-headline {
         font-size: 80px;
     }
